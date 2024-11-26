@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This design was inspired in [Beatrice Wambui](https://www.figma.com/community/file/1264680769254941322) at [Figma Website](https://www.figma.com).
 
-## Getting Started
+# Portfolio Design
 
-First, run the development server:
+## Future Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Scalability:** Ensure the application can handle growth and increased demand.
+* **Dark Mode:** Provide an option for a dark theme for comfortable viewing.
+* **Personal Information Edits:** Allow customization with personal details.
+* **Color Customization:** Enable users to change color schemes.
+* **Responsiveness:** Optimize the design for various devices and screen sizes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scalability
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application is designed with scalability in mind.  Future features and increasing content will be handled efficiently through:
 
-## Learn More
+* **Modular design:** Components are separated and reusable, promoting maintainability and scalability.
+* **Efficient data structures:**  Data is organized logically to minimize performance bottlenecks.
+* **Cloud-based hosting:**  Leveraging cloud infrastructure allows for easy scaling of resources as needed.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Application Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+**(Include a screenshot or a short video of the application here.)**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**(Add a link to a live demo if available.)**
