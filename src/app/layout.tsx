@@ -18,6 +18,7 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import { ThemeProvider } from "@/components/providers/ThemeProviders";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -43,7 +44,9 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
-        <body className={`p-4 bg-primary flex justify-center items-center h-dvh ${poppins.className}`}>
+        <body
+          className={`p-4 bg-primary flex justify-center items-center h-dvh ${poppins.className}`}
+        >
           {" "}
           <section className="rounded-lg bg-base-200 h-[calc(100dvh-2rem)] overflow-y-scroll pb-5">
             {/* <AlertCompo /> */}
@@ -97,7 +100,9 @@ export default function RootLayout({
                     <FaEnvelope size={20} className="primary" />
                     <div className="text-sm">
                       <p className="font-semibold">Email</p>
-                      <p className="text-gray-400">example@email.com</p>
+                      <p className="text-gray-400 break-words text-xs lg:text-sm">
+                        example@email.com
+                      </p>
                     </div>
                   </div>
                   <div className="divider"></div>
@@ -122,24 +127,24 @@ export default function RootLayout({
               </div>
 
               {/* conteiner 2 */}
-              <div className="bg-base-100 text-center p-2 rounded-lg relative mt-16 lg:mt-0">
-                <div className="bg-base-100 absolute lg:right-0 right-1/2 translate-x-1/2 -top-16 flex gap-5 items-center justify-center p-2 rounded-lg">
-                  <button className="btn btn-sm flex flex-col items-center gap-2">
+              <div id='page' className="bg-base-100 text-center p-2 rounded-lg relative mt-20 lg:mt-0">
+                <div className="bg-base-100 absolute lg:right-0 right-1/2 translate-x-1/2 -top-20 flex gap-5 items-center justify-center p-2 rounded-lg">
+                  <Link href="/#page" className="btn btn-md flex flex-col items-center gap-2">
                     <FaHouse size={15} />
-                    <span>Home</span>
-                  </button>
-                  <button className="btn btn-sm flex flex-col items-center gap-2">
+                    <span className="hidden lg:block">Home</span>
+                  </Link>
+                  <Link href="/resume#page" className="btn btn-md flex flex-col items-center gap-2">
                     <FaFile size={15} />
-                    <span>Resume</span>
-                  </button>
-                  <button className="btn btn-sm flex flex-col items-center gap-2">
+                    <span className="hidden lg:block">Resume</span>
+                  </Link>
+                  <Link href="/work#page" className="btn btn-md flex flex-col items-center gap-2">
                     <FaBriefcase size={15} />
-                    <span>Work</span>
-                  </button>
-                  <button className="btn btn-sm flex flex-col items-center gap-2">
+                    <span className="hidden lg:block">Work</span>
+                  </Link>
+                  <Link href="/contact#page" className="btn btn-md flex flex-col items-center gap-2">
                     <FaEnvelope size={15} />
-                    <span>Contact</span>
-                  </button>
+                    <span className="hidden lg:block">Contact</span>
+                  </Link>
                 </div>
 
                 {children}
