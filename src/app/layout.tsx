@@ -17,6 +17,7 @@ import {
   FaPhone,
   FaXTwitter,
 } from "react-icons/fa6";
+import { ThemeProvider } from "@/components/providers/ThemeProviders";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -40,104 +41,110 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html theme-data="dark" lang="en">
-      <body className={`p-4 bg-primary max-h-screen ${poppins.className}`}>
-        {" "}
-        <section className="rounded-lg bg-base-200 h-[calc(100vh-2rem)] overflow-y-scroll pb-5">
-          {/* <AlertCompo /> */}
-          <div className="flex justify-between py-5 px-10 mb-20">
-            <p className={`text-3xl font-medium ${windSong.className}`}>
-              Pedro{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
-                Nicory
-              </span>
-            </p>
+    <ThemeProvider>
+      <html lang="en">
+        <body className={`p-4 bg-primary max-h-screen ${poppins.className}`}>
+          {" "}
+          <section className="rounded-lg bg-base-200 h-[calc(100vh-2rem)] overflow-y-scroll pb-5">
+            {/* <AlertCompo /> */}
+            <div className="flex justify-between py-5 px-10 mb-20">
+              <p className={`text-3xl font-medium ${windSong.className}`}>
+                Pedro{" "}
+                <span className="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">
+                  Nicory
+                </span>
+              </p>
 
-            <ThemeController />
-          </div>
-
-          <section className="mx-10 lg:mx-20 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-5">
-            {/* conteiner 1 */}
-            <div className="bg-base-100 min-w-96 text-center p-5 rounded-lg grid grid-cols-1 gap-5">
-              {/* IMAGEM */}
-              <span className="bg-primary w-40 h-40 block mx-auto rounded-lg -mt-20"></span>
-
-              <h1 className={`font-semibold text-2xl ${raleway.className}`}>Pedro Nicory</h1>
-              <h2 className="text-sm text-gray-400 ">FullStack Developer</h2>
-
-              <section className="flex gap-2 justify-center">
-                <a href="/" className="btn btn-md">
-                  <FaLinkedin size={20} />
-                </a>
-                <a href="/" className="btn btn-md">
-                  <FaGithub size={20} />
-                </a>
-                <a href="/" className="btn btn-md">
-                  <FaInstagram size={20} />
-                </a>
-                <a href="/" className="btn btn-md">
-                  <FaXTwitter size={20} />
-                </a>
-              </section>
-
-              <section className="bg-base-200 rounded-lg p-12">
-                <div className="flex items-center text-left gap-5 w-full">
-                  <FaPhone size={20} className="primary" />
-                  <div className="text-sm">
-                    <p className="font-semibold">Phone</p>
-                    <p className="text-gray-400">(00) 00000-0000</p>
-                  </div>
-                </div>
-                <div className="divider"></div>
-                <div className="flex items-center text-left gap-5 w-full">
-                  <FaEnvelope size={20} className="primary" />
-                  <div className="text-sm">
-                    <p className="font-semibold">Email</p>
-                    <p className="text-gray-400">example@email.com</p>
-                  </div>
-                </div>
-                <div className="divider"></div>
-                <div className="flex items-center text-left gap-5 w-full">
-                  <FaMapMarkerAlt size={20} className="primary" />
-                  <div className="text-sm">
-                    <p className="font-semibold">Location</p>
-                    <p className="text-gray-400">123 Example St, City, Country</p>
-                  </div>
-                </div>
-                <div className="divider"></div>
-                <button className="btn bg-gradient-to-r from-primary to-secondary text-white rounded-xl flex items-center gap-2 p-3">
-                  <FaDownload size={20} />
-                  <span>Download Resume</span>
-                </button>
-              </section>
+              <ThemeController />
             </div>
 
-            {/* conteiner 2 */}
-            <div className="bg-base-100 text-center p-2 rounded-lg relative">
-              <div className="bg-base-100 absolute right-0 -top-16 flex gap-5 items-center justify-center p-2 rounded-lg">
-                <button className="btn btn-sm flex flex-col items-center gap-2">
-                  <FaHouse size={15} />
-                  <span>Home</span>
-                </button>
-                <button className="btn btn-sm flex flex-col items-center gap-2">
-                  <FaFile size={15} />
-                  <span>Resume</span>
-                </button>
-                <button className="btn btn-sm flex flex-col items-center gap-2">
-                  <FaBriefcase size={15} />
-                  <span>Work</span>
-                </button>
-                <button className="btn btn-sm flex flex-col items-center gap-2">
-                  <FaEnvelope size={15} />
-                  <span>Contact</span>
-                </button>
+            <section className="mx-10 lg:mx-20 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-5">
+              {/* conteiner 1 */}
+              <div className="bg-base-100 min-w-96 text-center p-5 rounded-lg grid grid-cols-1 gap-5">
+                {/* IMAGEM */}
+                <span className="bg-primary w-40 h-40 block mx-auto rounded-lg -mt-20"></span>
+
+                <h1 className={`font-semibold text-2xl ${raleway.className}`}>
+                  Pedro Nicory
+                </h1>
+                <h2 className="text-sm text-gray-400 ">FullStack Developer</h2>
+
+                <section className="flex gap-2 justify-center">
+                  <a href="/" className="btn btn-md">
+                    <FaLinkedin size={20} />
+                  </a>
+                  <a href="/" className="btn btn-md">
+                    <FaGithub size={20} />
+                  </a>
+                  <a href="/" className="btn btn-md">
+                    <FaInstagram size={20} />
+                  </a>
+                  <a href="/" className="btn btn-md">
+                    <FaXTwitter size={20} />
+                  </a>
+                </section>
+
+                <section className="bg-base-200 rounded-lg p-12">
+                  <div className="flex items-center text-left gap-5 w-full">
+                    <FaPhone size={20} className="primary" />
+                    <div className="text-sm">
+                      <p className="font-semibold">Phone</p>
+                      <p className="text-gray-400">(00) 00000-0000</p>
+                    </div>
+                  </div>
+                  <div className="divider"></div>
+                  <div className="flex items-center text-left gap-5 w-full">
+                    <FaEnvelope size={20} className="primary" />
+                    <div className="text-sm">
+                      <p className="font-semibold">Email</p>
+                      <p className="text-gray-400">example@email.com</p>
+                    </div>
+                  </div>
+                  <div className="divider"></div>
+                  <div className="flex items-center text-left gap-5 w-full">
+                    <FaMapMarkerAlt size={20} className="primary" />
+                    <div className="text-sm">
+                      <p className="font-semibold">Location</p>
+                      <p className="text-gray-400">
+                        123 Example St, City, Country
+                      </p>
+                    </div>
+                  </div>
+                  <div className="divider"></div>
+                  <button className="btn bg-gradient-to-r from-primary to-secondary text-white rounded-xl flex items-center gap-2 p-3">
+                    <FaDownload size={20} />
+                    <span>Download Resume</span>
+                  </button>
+                </section>
               </div>
 
-              {children}
-            </div>
+              {/* conteiner 2 */}
+              <div className="bg-base-100 text-center p-2 rounded-lg relative">
+                <div className="bg-base-100 absolute right-0 -top-16 flex gap-5 items-center justify-center p-2 rounded-lg">
+                  <button className="btn btn-sm flex flex-col items-center gap-2">
+                    <FaHouse size={15} />
+                    <span>Home</span>
+                  </button>
+                  <button className="btn btn-sm flex flex-col items-center gap-2">
+                    <FaFile size={15} />
+                    <span>Resume</span>
+                  </button>
+                  <button className="btn btn-sm flex flex-col items-center gap-2">
+                    <FaBriefcase size={15} />
+                    <span>Work</span>
+                  </button>
+                  <button className="btn btn-sm flex flex-col items-center gap-2">
+                    <FaEnvelope size={15} />
+                    <span>Contact</span>
+                  </button>
+                </div>
+
+                {children}
+              </div>
+            </section>
           </section>
-        </section>
-      </body>
-    </html>
+        </body>
+      </html>
+    </ThemeProvider>
   );
 }
