@@ -4,11 +4,11 @@ This design was inspired in [Beatrice Wambui](https://www.figma.com/community/fi
 
 ## Future Features
 
-* **Scalability:** Ensure the application can handle growth and increased demand.
-* **Dark Mode:** Provide an option for a dark theme for comfortable viewing.
-* **Personal Information Edits:** Allow customization with personal details.
-* **Color Customization:** Enable users to change color schemes.
-* **Responsiveness:** Optimize the design for various devices and screen sizes.
+* [  ] **Scalability:** Ensure the application can handle growth and increased demand.
+* [  ] **Dark Mode:** Provide an option for a dark theme for comfortable viewing.
+* [  ] **Personal Information Edits:** Allow customization with personal details.
+* [  ] **Color Customization:** Enable users to change color schemes.
+* [  ] **Responsiveness:** Optimize the design for various devices and screen sizes.
 
 
 ## Scalability
