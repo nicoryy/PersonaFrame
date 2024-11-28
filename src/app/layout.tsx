@@ -43,9 +43,9 @@ export default function RootLayout({
   return (
     <ThemeProvider>
       <html lang="en">
-        <body className={`p-4 bg-primary max-h-screen ${poppins.className}`}>
+        <body className={`p-4 bg-primary flex justify-center items-center h-dvh ${poppins.className}`}>
           {" "}
-          <section className="rounded-lg bg-base-200 h-[calc(100vh-2rem)] overflow-y-scroll pb-5">
+          <section className="rounded-lg bg-base-200 h-[calc(100dvh-2rem)] overflow-y-scroll pb-5">
             {/* <AlertCompo /> */}
             <div className="flex justify-between py-5 px-10 mb-20">
               <p className={`text-3xl font-medium ${windSong.className}`}>
@@ -60,7 +60,7 @@ export default function RootLayout({
 
             <section className="mx-10 lg:mx-20 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-5">
               {/* conteiner 1 */}
-              <div className="bg-base-100 min-w-96 text-center p-5 rounded-lg grid grid-cols-1 gap-5">
+              <div className="bg-base-100 lg:min-w-96 text-center p-5 rounded-lg grid grid-cols-1 gap-5">
                 {/* IMAGEM */}
                 <span className="bg-primary w-40 h-40 block mx-auto rounded-lg -mt-20"></span>
 
@@ -111,8 +111,11 @@ export default function RootLayout({
                     </div>
                   </div>
                   <div className="divider"></div>
-                  <button className="btn bg-gradient-to-r from-primary to-secondary text-white rounded-xl flex items-center gap-2 p-3">
-                    <FaDownload size={20} />
+                  <button
+                    className="btn w-full bg-gradient-to-r from-primary to-secondary text-xs lg:text-base
+                   text-white rounded-xl flex items-center gap-2 p-3"
+                  >
+                    <FaDownload size={15} />
                     <span>Download Resume</span>
                   </button>
                 </section>
