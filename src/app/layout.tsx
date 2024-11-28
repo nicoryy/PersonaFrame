@@ -119,8 +119,8 @@ export default function RootLayout({
               </div>
 
               {/* conteiner 2 */}
-              <div className="bg-base-100 text-center p-2 rounded-lg relative">
-                <div className="bg-base-100 absolute right-0 -top-16 flex gap-5 items-center justify-center p-2 rounded-lg">
+              <div className="bg-base-100 text-center p-2 rounded-lg relative mt-16 lg:mt-0">
+                <div className="bg-base-100 absolute lg:right-0 right-1/2 translate-x-1/2 -top-16 flex gap-5 items-center justify-center p-2 rounded-lg">
                   <button className="btn btn-sm flex flex-col items-center gap-2">
                     <FaHouse size={15} />
                     <span>Home</span>
