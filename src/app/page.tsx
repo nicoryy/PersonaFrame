@@ -3,10 +3,10 @@ import { FaLaptopCode, FaMobile, FaPaintbrush } from "react-icons/fa6";
 
 export default function Home() {
   return (
-    <section className="mx-10 text-left grid gap-5">
+    <section className="lg:mx-10 mx-5 py-2 text-left grid gap-5">
       <div className="flex gap-5 w-full items-center justify-start">
-        <p className="uppercase text-3xl">about me</p>
-        <span className="bg-gradient-to-r from-primary to-secondary w-72 lg:w-96 block h-0.5" />
+        <p className="uppercase text-nowrap text-3xl">about me</p>
+        <span className="bg-gradient-to-r from-primary to-secondary w-full lg:w-96 block h-0.5" />
       </div>
 
       <p className="text-sm">
