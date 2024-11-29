@@ -128,7 +128,7 @@ export default function RootLayout({
 
               {/* conteiner 2 */}
               <div id='page' className="bg-base-100 text-center p-2 rounded-lg relative mt-20 lg:mt-0">
-                <div className="bg-base-100 absolute lg:right-0 right-1/2 translate-x-1/2 -top-20 flex gap-5 items-center justify-center p-2 rounded-lg">
+                <div className="bg-base-100 absolute lg:right-0 right-1/2 translate-x-1/2 lg:translate-x-0 -top-20 flex gap-5 items-center justify-center p-2 rounded-lg">
                   <Link href="/#page" className="btn btn-md flex flex-col items-center gap-2">
                     <FaHouse size={15} />
                     <span className="hidden lg:block">Home</span>
