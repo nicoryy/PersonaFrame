@@ -73,18 +73,18 @@ export default function RootLayout({
                 <h2 className="text-sm text-gray-400 ">FullStack Developer</h2>
 
                 <section className="flex gap-2 justify-center">
-                  <a href="/" className="btn btn-md">
+                  <Link href="/" className="btn btn-md">
                     <FaLinkedin size={20} />
-                  </a>
-                  <a href="/" className="btn btn-md">
+                  </Link>
+                  <Link href="/" className="btn btn-md">
                     <FaGithub size={20} />
-                  </a>
-                  <a href="/" className="btn btn-md">
+                  </Link>
+                  <Link href="/" className="btn btn-md">
                     <FaInstagram size={20} />
-                  </a>
-                  <a href="/" className="btn btn-md">
+                  </Link>
+                  <Link href="/" className="btn btn-md">
                     <FaXTwitter size={20} />
-                  </a>
+                  </Link>
                 </section>
 
                 <section className="bg-base-200 rounded-lg p-12">

@@ -7,9 +7,9 @@ import { FaLaptopCode, FaMobile, FaPaintbrush } from "react-icons/fa6";
 export default function Home() {
   return (
     <Conteiner>
-       <Title title='About me' />
+      <Title title="About me" />
       <p className="text-sm">
-        Hello there! I'm thrilled to welcome you to my portfolio. I am a
+        Hello there! I&lsquo;m thrilled to welcome you to my portfolio. I am a
         passionate and versatile full-stack developer with a keen interest in
         exploring the latest cutting-edge technologies. My journey in the world
         of web development has been nothing short of exhilarating, and I
@@ -24,7 +24,7 @@ export default function Home() {
           <IconTitle title="Development" icon={<FaLaptopCode size={20} />} />
           <p className="text-sm text-justify">
             As a developer, I find myself most captivated by the power and
-            flexibility of NEXT.js. I'm always eager to dive into new projects
+            flexibility of NEXT.js. I&lsquo;m always eager to dive into new projects
             that leverage NEXT.js and discover innovative ways to create fast,
             scalable, and user-friendly applications.
           </p>
@@ -35,7 +35,7 @@ export default function Home() {
           <p className="text-sm text-justify">
             With a focus on user-centric design and cutting-edge technologies, I
             thrive on building intuitive and efficient apps that make a positive
-            impact on people's lives. Let's turn ideas into reality and shape
+            impact on people&lsquo;s lives. Let&lsquo;s turn ideas into reality and shape
             the future together.
           </p>
         </div>
@@ -44,7 +44,7 @@ export default function Home() {
           <IconTitle title="Design" icon={<FaPaintbrush size={20} />} />
           <p className="text-sm text-justify">
             Crafting visually appealing and intuitive user interfaces that offer
-            a delightful user experience is something I'm truly fanatic about.
+            a delightful user experience is something I&lsquo;m truly fanatic about.
           </p>
         </div>
 
@@ -60,4 +60,3 @@ export default function Home() {
     </Conteiner>
   );
 }
-

@@ -46,7 +46,7 @@ function ResumePage() {
 
       {/* work skill | soft skill */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-        <section className=''>
+        <section>
           <IconTitle icon={<FaBriefcase size={20} />} title="Work Skill" />
         </section>
       </section>
