@@ -1,14 +1,24 @@
 This design was inspired in [Beatrice Wambui](https://www.figma.com/community/file/1264680769254941322) at [Figma Website](https://www.figma.com).
 
+
+## Application Preview
+
+
+<img alt='Live Demo ScreenShot' src="/.github/image/PreviewImage.png"/>
+
+
+👉 [Live Demo](portfolio-design-sigma-dun.vercel.app/)
+
+
 # Portfolio Design
 
 ## Future Features
 
 * [  ] **Scalability:** Ensure the application can handle growth and increased demand.
-* [  ] **Dark Mode:** Provide an option for a dark theme for comfortable viewing.
+* [ x ] **Dark Mode:** Provide an option for a dark theme for comfortable viewing.
 * [  ] **Personal Information Edits:** Allow customization with personal details.
 * [  ] **Color Customization:** Enable users to change color schemes.
-* [  ] **Responsiveness:** Optimize the design for various devices and screen sizes.
+* [ x ] **Responsiveness:** Optimize the design for various devices and screen sizes.
 
 
 ## Scalability
@@ -19,11 +29,3 @@ The application is designed with scalability in mind.  Future features and incre
 * **Efficient data structures:**  Data is organized logically to minimize performance bottlenecks.
 * **Cloud-based hosting:**  Leveraging cloud infrastructure allows for easy scaling of resources as needed.
 
-
-## Application Preview
-
-
-**(Include a screenshot or a short video of the application here.)**
-
-
-**(Add a link to a live demo if available.)**
