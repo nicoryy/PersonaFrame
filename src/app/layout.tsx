@@ -48,7 +48,7 @@ export default function RootLayout({
           className={`p-4 bg-primary flex justify-center items-center h-dvh ${poppins.className}`}
         >
           {" "}
-          <section className="rounded-lg bg-base-200 h-[calc(100dvh-2rem)] overflow-y-scroll pb-5">
+          <section className="rounded-lg bg-base-200 h-[calc(100dvh-2rem)] w-full overflow-y-scroll pb-5">
             {/* <AlertCompo /> */}
             <div className="flex justify-between py-5 px-10 mb-20">
               <p className={`text-3xl font-medium ${windSong.className}`}>
