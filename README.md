@@ -7,7 +7,7 @@ This design was inspired in [Beatrice Wambui](https://www.figma.com/community/fi
 <img alt='Live Demo ScreenShot' src="/.github/image/PreviewImage.png"/>
 
 
-👉 [Live Demo](portfolio-design-sigma-dun.vercel.app/)
+👉 [Live Demo](https://portfolio-design-sigma-dun.vercel.app/)
 
 
 # Portfolio Design
