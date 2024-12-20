@@ -38,9 +38,8 @@ The application is designed with scalability in mind. Future features and increa
 
 Before starting, ensure you meet the following requirements:
 
-- You have installed the latest version of `<language / dependency / required>`
+- You have installed the latest version of `Node 22`
 - You have a `<Windows / Linux / Mac>` machine. Indicate which operating system is compatible / not compatible.
-- You have read `<guide / link / documentation_related_to_the_project>`.
 
 ## 🚀 Installing PersonaFrame
 
