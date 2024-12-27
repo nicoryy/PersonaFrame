@@ -19,6 +19,7 @@ import {
 } from "react-icons/fa6";
 import { ThemeProvider } from "@/components/providers/ThemeProviders";
 import Link from "next/link";
+import IconTitle from "@/components/layout/IconTitle";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -89,7 +90,7 @@ export default function RootLayout({
 
                 <section className="bg-base-200 rounded-lg p-12">
                   <div className="flex items-center text-left gap-5 w-full">
-                    <FaPhone size={20} className="primary" />
+                    <IconTitle title="" icon={<FaPhone size={20} />} />
                     <div className="text-sm">
                       <p className="font-semibold">Phone</p>
                       <p className="text-gray-400">(00) 00000-0000</p>
@@ -97,7 +98,7 @@ export default function RootLayout({
                   </div>
                   <div className="divider"></div>
                   <div className="flex items-center text-left gap-5 w-full">
-                    <FaEnvelope size={20} className="primary" />
+                    <IconTitle title="" icon={<FaEnvelope size={20} />} />
                     <div className="text-sm">
                       <p className="font-semibold">Email</p>
                       <p className="text-gray-400 break-words text-xs lg:text-sm">
@@ -107,7 +108,7 @@ export default function RootLayout({
                   </div>
                   <div className="divider"></div>
                   <div className="flex items-center text-left gap-5 w-full">
-                    <FaMapMarkerAlt size={20} className="primary" />
+                    <IconTitle title="" icon={<FaMapMarkerAlt size={20} />} />
                     <div className="text-sm">
                       <p className="font-semibold">Location</p>
                       <p className="text-gray-400">
@@ -127,21 +128,36 @@ export default function RootLayout({
               </div>
 
               {/* conteiner 2 */}
-              <div id='page' className="bg-base-100 text-center p-2 rounded-lg relative mt-20 lg:mt-0">
+              <div
+                id="page"
+                className="bg-base-100 text-center p-2 rounded-lg relative mt-20 lg:mt-0"
+              >
                 <div className="bg-base-100 absolute lg:right-0 right-1/2 translate-x-1/2 lg:translate-x-0 -top-20 flex gap-5 items-center justify-center p-2 rounded-lg">
-                  <Link href="/#page" className="btn btn-md flex flex-col items-center gap-2">
+                  <Link
+                    href="/#page"
+                    className="btn btn-md flex flex-col items-center gap-2"
+                  >
                     <FaHouse size={15} />
                     <span className="hidden lg:block">Home</span>
                   </Link>
-                  <Link href="/resume#page" className="btn btn-md flex flex-col items-center gap-2">
+                  <Link
+                    href="/resume#page"
+                    className="btn btn-md flex flex-col items-center gap-2"
+                  >
                     <FaFile size={15} />
                     <span className="hidden lg:block">Resume</span>
                   </Link>
-                  <Link href="/work#page" className="btn btn-md flex flex-col items-center gap-2">
+                  <Link
+                    href="/work#page"
+                    className="btn btn-md flex flex-col items-center gap-2"
+                  >
                     <FaBriefcase size={15} />
                     <span className="hidden lg:block">Work</span>
                   </Link>
-                  <Link href="/contact#page" className="btn btn-md flex flex-col items-center gap-2">
+                  <Link
+                    href="/contact#page"
+                    className="btn btn-md flex flex-col items-center gap-2"
+                  >
                     <FaEnvelope size={15} />
                     <span className="hidden lg:block">Contact</span>
                   </Link>
