@@ -10,8 +10,8 @@ const ContactPage = () => {
     <Conteiner>
       <Title title="Contact" />
 
-      <section className="flex justify-between gap-10">
-        <div className="grid gap-5 bg-base-300 p-5 rounded-lg w-full ">
+      <section className="flex flex-col lg:flex-row justify-between gap-5">
+        <div className="grid gap-2 bg-base-300 p-5 rounded-lg w-full ">
           <IconTitle title="Phone :" icon={<FaPhone size={20} />} />
 
           <p className="text-sm pl-10">+(11) 9 9999-9999</p>
@@ -56,7 +56,9 @@ const ContactPage = () => {
             className="textarea w-full"
           />
 
-          <button className="btn btn-outline btn-secondary w-32 rounded-full">Send</button>
+          <button className="btn btn-outline btn-secondary w-32 rounded-full">
+            Send
+          </button>
         </form>
       </section>
     </Conteiner>
