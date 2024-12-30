@@ -43,3 +43,83 @@ export const profileAtom = atom({
   resume:
     "https://drive.google.com/file/d/1ta1-8-tO8oahJcQoiOpZZww547-OuOZZ/view",
 });
+
+export const resumeAtom = atom({
+  id: "resume",
+  educations: [
+    {
+      title: "Bachelor of Computer Science",
+      subtitle: "UNIFOR",
+      date: "2020 - 2023",
+    },
+    {
+      title: "FullStack Development",
+      subtitle: "Brazil Instituition",
+      date: "2020 - 2023",
+    },
+  ],
+  experiences: [
+    {
+      title: "FullStack Developer",
+      subtitle: "Havard University",
+      date: "2023 - 2023",
+    },
+    {
+      title: "FullStack Developer",
+      subtitle: "Brazil Instituition",
+      date: "2023 - 2023",
+    },
+  ],
+  workSkills: [
+    "NEXT.js",
+    "React.js",
+    "HTML 5",
+    "CSS 3",
+    "Tailwind CSS",
+    "Figma",
+    "JavaScript",
+    "Mongo DB",
+    "SQL",
+    "Angular",
+    "Android",
+    "Git",
+  ],
+  softSkills: [
+    "Time Management",
+    "Mentorship",
+    "Impeccable Communication",
+    "Flexibility",
+    "Research",
+    "Writing",
+  ],
+});
+
+export const projectsAtom = atom({
+  id: "projects",
+  projects: [
+    {
+      title: "El_Chancho Menu",
+      type: "Mobile",
+      image: "Image Example",
+      github: "https://github.com/nicoryy/el_chancho_menu",
+    },
+    {
+      title: "L&L - Assessoria e Servi o s ",
+      type: "Website",
+      image: "Image Example",
+      github: "https://github.com/nicoryy/L-L_Assessoria_e_Servicos",
+    },
+    {
+      title: "Persona Frame",
+      type: "Website",
+      image: "Image Example",
+      github: "https://github.com/nicoryy/personaFrame",
+    },
+    {
+      title: "Auto Create Dir",
+      type: "Desktop",
+      image: "Image Example",
+      github: "https://github.com/nicoryy/ACD",
+    },
+  ],
+});
