@@ -30,6 +30,8 @@ export const homeAtom = atom({
 
 export const profileAtom = atom({
   id: "profile",
+  image:
+    "https://avatars.githubusercontent.com/u/96792563?s=400&u=5c4c080bc87a024ad7071e000ff1800614e16523&v=4",
   firstname: "Pedro",
   lastname: "Nicory",
   role: "FullStack Developer",

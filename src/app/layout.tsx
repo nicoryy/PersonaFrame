@@ -24,6 +24,7 @@ import Link from "next/link";
 import IconTitle from "@/components/layout/IconTitle";
 import { profileAtom } from "@/components/constans";
 import { useAtom } from "jotai";
+import Image from "next/image";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -71,7 +72,13 @@ export default function RootLayout({
               {/* conteiner 1 */}
               <div className="bg-base-100 lg:min-w-96 text-center p-5 rounded-lg grid grid-cols-1 gap-5">
                 {/* IMAGEM */}
-                <span className="bg-primary w-40 h-40 block mx-auto rounded-lg -mt-20"></span>
+                <Image
+                  alt="profile"
+                  width={160}
+                  height={160}
+                  src={profile.image}
+                  className="object-cover block mx-auto rounded-lg -mt-20"
+                />
 
                 <h1 className={`font-semibold text-2xl ${raleway.className}`}>
                   {profile.firstname} {profile.lastname}
