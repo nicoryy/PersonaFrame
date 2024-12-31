@@ -1,11 +1,16 @@
+"use client";
+
+import { profileAtom } from "@/components/constans";
 import Conteiner from "@/components/layout/Conteiner";
 import IconTitle from "@/components/layout/IconTitle";
 import Title from "@/components/layout/Title";
+import { useAtom } from "jotai";
 import React from "react";
 import { FaPhone } from "react-icons/fa6";
 import { GoMail } from "react-icons/go";
 
 const ContactPage = () => {
+  const [profile] = useAtom(profileAtom);
   return (
     <Conteiner>
       <Title title="Contact" />
@@ -14,14 +19,13 @@ const ContactPage = () => {
         <div className="grid gap-2 bg-base-300 p-5 rounded-lg w-full ">
           <IconTitle title="Phone :" icon={<FaPhone size={20} />} />
 
-          <p className="text-sm pl-10">+(11) 9 9999-9999</p>
-          <p className="text-sm pl-10">+(12) 9 9999-9999</p>
+          <p className="text-sm pl-10">{profile.phone}</p>
         </div>
 
         <div className="grid gap-5 bg-base-300 p-5 rounded-lg w-full">
           <IconTitle title="Email :" icon={<GoMail size={20} />} />
 
-          <p className="text-sm pl-10">pedronicory@gmail.com</p>
+          <p className="text-sm pl-10">{profile.email}</p>
         </div>
       </section>
 
