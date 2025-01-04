@@ -25,6 +25,7 @@ import IconTitle from "@/components/layout/IconTitle";
 import { profileAtom } from "@/components/constans";
 import { useAtom } from "jotai";
 import Image from "next/image";
+import { RiPencilFill } from "react-icons/ri";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -65,7 +66,12 @@ export default function RootLayout({
                 </span>
               </p>
 
-              <ThemeController />
+              <div className="flex gap-5">
+                <Link href="/edit">
+                  <RiPencilFill size={40} />
+                </Link>
+                <ThemeController />
+              </div>
             </div>
 
             <section className="mx-10 lg:mx-20 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-5">
@@ -73,6 +79,7 @@ export default function RootLayout({
               <div className="bg-base-100 lg:min-w-96 text-center p-5 rounded-lg grid grid-cols-1 gap-5">
                 {/* IMAGEM */}
                 <Image
+                  priority
                   alt="profile"
                   width={160}
                   height={160}
