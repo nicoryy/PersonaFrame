@@ -160,10 +160,11 @@ export default function RootLayout({
 
               {/* conteiner 2 */}
               <div
-                id="page"
-                className="bg-base-100 text-center p-2 rounded-lg relative mt-20 lg:mt-0"
+                id="page-container"
+                className="bg-base-100 relative min-h-screen lg:min-h-96 text-center p-2 rounded-lg mt-20 lg:mt-0"
               >
-                <div className="bg-base-100 absolute lg:right-0 right-1/2 translate-x-1/2 lg:translate-x-0 -top-20 flex gap-5 items-center justify-center p-2 rounded-lg">
+                {/* Div Absoluta - Não será cortada */}
+                <div className="bg-base-100 absolute lg:right-0 right-1/2 translate-x-1/2 lg:translate-x-0 -top-20 flex gap-5 items-center justify-center p-2 rounded-lg z-10">
                   <Link
                     href="/#page"
                     className="btn btn-md flex flex-col items-center gap-2"
@@ -194,7 +195,13 @@ export default function RootLayout({
                   </Link>
                 </div>
 
-                {children}
+                {/* Conteúdo que será rolável */}
+                <div
+                  id="page"
+                  className="overflow-y-scroll h-full p-4"
+                >
+                  {children}
+                </div>
               </div>
             </section>
           </section>
