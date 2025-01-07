@@ -7,7 +7,7 @@ import { useAtom } from "jotai";
 import {
   profileAtom,
   homeAtom,
-  projectsAtom,
+//   projectsAtom,
   resumeAtom,
 } from "@/components/constans";
 
