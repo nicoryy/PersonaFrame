@@ -14,8 +14,8 @@ import {
 const EditPage = () => {
   const [home, setHome] = useAtom(homeAtom);
   const [profile, setProfile] = useAtom(profileAtom);
-  const [resume, setResume] = useAtom(resumeAtom);
-  const [projects, setProjects] = useAtom(projectsAtom);
+  const [resume] = useAtom(resumeAtom); //setResume
+//   const [projects, setProjects] = useAtom(projectsAtom);
 
   const [isSelected, setIsSelected] = useState("home");
 
