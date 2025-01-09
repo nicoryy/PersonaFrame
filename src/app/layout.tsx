@@ -74,7 +74,7 @@ export default function RootLayout({
               </div>
             </div>
 
-            <section className="mx-10 lg:mx-20 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-5">
+            <section className="mx-5 lg:mx-20 grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-5">
               {/* conteiner 1 */}
               <div className="bg-base-100 lg:min-w-96 text-center p-5 rounded-lg grid grid-cols-1 gap-5">
                 {/* IMAGEM */}
@@ -198,7 +198,7 @@ export default function RootLayout({
                 {/* Conteúdo que será rolável */}
                 <div
                   id="page"
-                  className="overflow-y-scroll h-full p-4"
+                  className="overflow-y-scroll h-full p-0 lg:p-4"
                 >
                   {children}
                 </div>
