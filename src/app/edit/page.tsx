@@ -34,7 +34,7 @@ const EditPage = () => {
       <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full mb-5">
         <button
           className={
-            isSelected === "home" ? "btn w-full bg-primary text-white" : "btn w-full"
+            isSelected === "home" ? "btn w-full lg:w-auto bg-primary text-white" : "btn w-full lg:w-auto"
           }
           onClick={() => handleClick("home")}
         >
@@ -42,7 +42,7 @@ const EditPage = () => {
         </button>
         <button
           className={
-            isSelected === "profile" ? "btn w-full bg-primary text-white" : "btn w-full"
+            isSelected === "profile" ? "btn w-full lg:w-auto bg-primary text-white" : "btn w-full lg:w-auto"
           }
           onClick={() => handleClick("profile")}
         >
@@ -50,7 +50,7 @@ const EditPage = () => {
         </button>
         <button
           className={
-            isSelected === "resume" ? "btn w-full bg-primary text-white" : "btn w-full"
+            isSelected === "resume" ? "btn w-full lg:w-auto bg-primary text-white" : "btn w-full lg:w-auto"
           }
           onClick={() => handleClick("resume")}
         >
@@ -58,7 +58,7 @@ const EditPage = () => {
         </button>
         <button
           className={
-            isSelected === "work" ? "btn w-full bg-primary text-white" : "btn w-full"
+            isSelected === "work" ? "btn w-full lg:w-auto bg-primary text-white" : "btn w-full lg:w-auto"
           }
           onClick={() => handleClick("work")}
         >
