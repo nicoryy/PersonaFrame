@@ -7,7 +7,7 @@ import { useAtom } from "jotai";
 import {
   profileAtom,
   homeAtom,
-//   projectsAtom,
+  //   projectsAtom,
   resumeAtom,
 } from "@/components/constans";
 
@@ -15,7 +15,7 @@ const EditPage = () => {
   const [home, setHome] = useAtom(homeAtom);
   const [profile, setProfile] = useAtom(profileAtom);
   const [resume] = useAtom(resumeAtom); //setResume
-//   const [projects, setProjects] = useAtom(projectsAtom);
+  //   const [projects, setProjects] = useAtom(projectsAtom);
 
   const [isSelected, setIsSelected] = useState("home");
 
@@ -31,34 +31,42 @@ const EditPage = () => {
         Please, select the section you want to edit.
       </p>
 
-      <div className="flex gap-5 justify-center items-center w-full mb-5">
+      <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full mb-5">
         <button
-          className={isSelected === "home" ? "btn bg-primary" : "btn"}
+          className={
+            isSelected === "home" ? "btn w-full bg-primary text-white" : "btn w-full"
+          }
           onClick={() => handleClick("home")}
         >
           Home
         </button>
         <button
-          className={isSelected === "profile" ? "btn bg-primary" : "btn"}
+          className={
+            isSelected === "profile" ? "btn w-full bg-primary text-white" : "btn w-full"
+          }
           onClick={() => handleClick("profile")}
         >
           Profile
         </button>
         <button
-          className={isSelected === "resume" ? "btn bg-primary" : "btn"}
+          className={
+            isSelected === "resume" ? "btn w-full bg-primary text-white" : "btn w-full"
+          }
           onClick={() => handleClick("resume")}
         >
           Resume
         </button>
         <button
-          className={isSelected === "work" ? "btn bg-primary" : "btn"}
+          className={
+            isSelected === "work" ? "btn w-full bg-primary text-white" : "btn w-full"
+          }
           onClick={() => handleClick("work")}
         >
           Work
         </button>
       </div>
 
-      <div className="relative w-full   ">
+      <div className="relative w-full">
         <div
           className={`${
             isSelected === "home"
@@ -86,7 +94,7 @@ const EditPage = () => {
               <Title title="What I Do" />
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 py-2">
                 {Object.entries(home.whatido).map(([key, value]) => (
-                  <div key={key} className="bg-base-200 p-5 rounded">
+                  <div key={key} className="bg-base-300 p-5 rounded">
                     <p className="text-lg text-center">
                       {key.charAt(0).toUpperCase() + key.slice(1)}
                     </p>
@@ -320,9 +328,7 @@ const EditPage = () => {
                 <p className="text-center">Educations</p>
 
                 {resume.educations.map((education, index) => (
-                    <div key={index}>
-                        {/* CONTINUAR DAQUI */}
-                    </div>
+                  <div key={index}>{/* CONTINUAR DAQUI */}</div>
                 ))}
               </div>
             </section>
