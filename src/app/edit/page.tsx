@@ -10,11 +10,12 @@ import {
   //   projectsAtom,
   resumeAtom,
 } from "@/components/constans";
+import { FaTimes } from "react-icons/fa";
 
 const EditPage = () => {
   const [home, setHome] = useAtom(homeAtom);
   const [profile, setProfile] = useAtom(profileAtom);
-  const [resume] = useAtom(resumeAtom); //setResume
+  const [resume, setResume] = useAtom(resumeAtom); //setResume
   //   const [projects, setProjects] = useAtom(projectsAtom);
 
   const [isSelected, setIsSelected] = useState("home");
@@ -34,7 +35,9 @@ const EditPage = () => {
       <div className="flex flex-col lg:flex-row gap-5 justify-center items-center w-full mb-5">
         <button
           className={
-            isSelected === "home" ? "btn w-full lg:w-auto bg-primary text-white" : "btn w-full lg:w-auto"
+            isSelected === "home"
+              ? "btn w-full lg:w-auto bg-primary text-white"
+              : "btn w-full lg:w-auto"
           }
           onClick={() => handleClick("home")}
         >
@@ -42,7 +45,9 @@ const EditPage = () => {
         </button>
         <button
           className={
-            isSelected === "profile" ? "btn w-full lg:w-auto bg-primary text-white" : "btn w-full lg:w-auto"
+            isSelected === "profile"
+              ? "btn w-full lg:w-auto bg-primary text-white"
+              : "btn w-full lg:w-auto"
           }
           onClick={() => handleClick("profile")}
         >
@@ -50,7 +55,9 @@ const EditPage = () => {
         </button>
         <button
           className={
-            isSelected === "resume" ? "btn w-full lg:w-auto bg-primary text-white" : "btn w-full lg:w-auto"
+            isSelected === "resume"
+              ? "btn w-full lg:w-auto bg-primary text-white"
+              : "btn w-full lg:w-auto"
           }
           onClick={() => handleClick("resume")}
         >
@@ -58,7 +65,9 @@ const EditPage = () => {
         </button>
         <button
           className={
-            isSelected === "work" ? "btn w-full lg:w-auto bg-primary text-white" : "btn w-full lg:w-auto"
+            isSelected === "work"
+              ? "btn w-full lg:w-auto bg-primary text-white"
+              : "btn w-full lg:w-auto"
           }
           onClick={() => handleClick("work")}
         >
@@ -324,12 +333,268 @@ const EditPage = () => {
             <section className="bg-base-300 p-5 rounded-lg flex flex-col gap-5">
               <Title title="Resume" />
 
-              <div>
-                <p className="text-center">Educations</p>
-
+              <div className="flex flex-col gap-5">
                 {resume.educations.map((education, index) => (
-                  <div key={index}>{/* CONTINUAR DAQUI */}</div>
+                  <div className="bg-base-200 p-5 rounded-lg" key={index}>
+                    <p className="text-center text-lg font-semibold">
+                      {index + 1}° Education
+                    </p>
+                    <label htmlFor="title" className="label">
+                      Title
+                    </label>
+                    <input
+                      type="text"
+                      className="input input-primary w-full"
+                      value={education.title}
+                      onChange={(e) => {
+                        setResume({
+                          ...resume,
+                          educations: resume.educations.map((edu, i) => {
+                            if (i === index) {
+                              return {
+                                ...edu,
+                                title: e.target.value,
+                              };
+                            }
+                            return edu;
+                          }),
+                        });
+                      }}
+                    />
+
+                    <label htmlFor="subtitle" className="label">
+                      Subtitle
+                    </label>
+                    <input
+                      type="text"
+                      className="input input-primary w-full"
+                      value={education.subtitle}
+                      onChange={(e) => {
+                        setResume({
+                          ...resume,
+                          educations: resume.educations.map((edu, i) => {
+                            if (i === index) {
+                              return {
+                                ...edu,
+                                subtitle: e.target.value,
+                              };
+                            }
+                            return edu;
+                          }),
+                        });
+                      }}
+                    />
+
+                    <label htmlFor="date" className="label">
+                      Date
+                    </label>
+                    <input
+                      type="text"
+                      className="input input-primary w-full"
+                      value={education.date}
+                      onChange={(e) => {
+                        setResume({
+                          ...resume,
+                          educations: resume.educations.map((edu, i) => {
+                            if (i === index) {
+                              return {
+                                ...edu,
+                                date: e.target.value,
+                              };
+                            }
+                            return edu;
+                          }),
+                        });
+                      }}
+                    />
+                  </div>
                 ))}
+              </div>
+
+              <span className="bg-gradient-to-r from-primary to-secondary w-full block h-1 my-2" />
+
+              <div className="flex flex-col gap-5">
+                {resume.experiences.map((experience, index) => (
+                  <div className="bg-base-200 p-5 rounded-lg" key={index}>
+                    <p className="text-center text-lg font-semibold">
+                      {index + 1}° Experience
+                    </p>
+                    <label htmlFor="title" className="label">
+                      Title
+                    </label>
+                    <input
+                      type="text"
+                      className="input input-primary w-full"
+                      value={experience.title}
+                      onChange={(e) => {
+                        setResume({
+                          ...resume,
+                          experiences: resume.experiences.map((exp, i) => {
+                            if (i === index) {
+                              return {
+                                ...exp,
+                                title: e.target.value,
+                              };
+                            }
+                            return exp;
+                          }),
+                        });
+                      }}
+                    />
+
+                    <label htmlFor="subtitle" className="label">
+                      Subtitle
+                    </label>
+                    <input
+                      type="text"
+                      className="input input-primary w-full"
+                      value={experience.subtitle}
+                      onChange={(e) => {
+                        setResume({
+                          ...resume,
+                          experiences: resume.experiences.map((exp, i) => {
+                            if (i === index) {
+                              return {
+                                ...exp,
+                                subtitle: e.target.value,
+                              };
+                            }
+                            return exp;
+                          }),
+                        });
+                      }}
+                    />
+
+                    <label htmlFor="date" className="label">
+                      Date
+                    </label>
+                    <input
+                      type="text"
+                      className="input input-primary w-full"
+                      value={experience.date}
+                      onChange={(e) => {
+                        setResume({
+                          ...resume,
+                          experiences: resume.experiences.map((exp, i) => {
+                            if (i === index) {
+                              return {
+                                ...exp,
+                                date: e.target.value,
+                              };
+                            }
+                            return exp;
+                          }),
+                        });
+                      }}
+                    />
+                  </div>
+                ))}
+              </div>
+
+              <span className="bg-gradient-to-r from-primary to-secondary w-full block h-1 my-2" />
+
+              <p className="text-xl font-semibold text-center">Work Skills</p>
+
+              <div className="flex flex-wrap gap-5">
+                {resume.workSkills.map((skill, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="badge badge-primary flex gap-3 justify-center py-3"
+                    >
+                      {skill}{" "}
+                      {
+                        <button
+                          onClick={() => {
+                            setResume({
+                              ...resume,
+                              workSkills: resume.workSkills.filter(
+                                (s, i) => i !== index
+                              ),
+                            });
+                          }}
+                          className="bg-base-300/30 grid place-items-center h-5 w-5 rounded-full"
+                        >
+                          <FaTimes />
+                        </button>
+                      }
+                    </div>
+                  );
+                })}
+
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const input = e.currentTarget[0] as HTMLInputElement;
+                    if (input.value) {
+                      setResume({
+                        ...resume,
+                        workSkills: [...resume.workSkills, input.value],
+                      });
+                      input.value = "";
+                    }
+                  }}
+                  className="w-full flex justify-between gap-10"
+                >
+                  <input placeholder="Input here something you wanna add" type="text" className="input input-primary text-sm text-base-content/40 w-full" />
+
+                  <button type="submit" className="btn btn-primary">
+                    Add
+                  </button>
+                </form>
+              </div>
+
+              <span className="bg-gradient-to-r from-primary to-secondary w-full block h-1 my-2" />
+
+              <p className="text-xl font-semibold text-center">Soft Skills</p>
+
+              <div className="flex flex-wrap gap-5">
+                {resume.softSkills.map((skill, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="badge badge-primary flex gap-3 justify-center py-3"
+                    >
+                      {skill}{" "}
+                      {
+                        <button
+                          onClick={() => {
+                            setResume({
+                              ...resume,
+                              softSkills: resume.softSkills.filter(
+                                (s, i) => i !== index
+                              ),
+                            });
+                          }}
+                          className="bg-base-300/30 grid place-items-center h-5 w-5 rounded-full"
+                        >
+                          <FaTimes />
+                        </button>
+                      }
+                    </div>
+                  );
+                })}
+
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const input = e.currentTarget[0] as HTMLInputElement;
+                    if (input.value) {
+                      setResume({
+                        ...resume,
+                        softSkills: [...resume.softSkills, input.value],
+                      });
+                      input.value = "";
+                    }
+                  }}
+                  className="w-full flex justify-between gap-10"
+                >
+                  <input placeholder="Input here something you wanna add" type="text" className="input input-primary text-sm w-full" />
+
+                  <button type="submit" className="btn btn-primary">
+                    Add
+                  </button>
+                </form>
               </div>
             </section>
           )}
