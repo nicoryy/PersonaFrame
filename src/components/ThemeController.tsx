@@ -1,7 +1,7 @@
 "use client";
 import { useTheme } from "./providers/ThemeProviders";
 
- // Necessário para que o componente funcione no cliente
+// Necessário para que o componente funcione no cliente
 
 interface ControllerProps {
   classNameProp?: string;
@@ -23,7 +23,7 @@ const ThemeController = ({ classNameProp }: ControllerProps) => {
 
       {/* Ícone do sol (para tema claro) */}
       <svg
-        className={`swap-off h-10 w-10 fill-current`}
+        className={`swap-off h-8 w-8 lg:h-10 lg:w-10 fill-current`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -32,7 +32,7 @@ const ThemeController = ({ classNameProp }: ControllerProps) => {
 
       {/* Ícone da lua (para tema escuro) */}
       <svg
-        className={`swap-on h-10 w-10 fill-current`}
+        className={`swap-on h-8 w-8 lg:h-10 lg:w-10 fill-current`}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >

@@ -66,9 +66,9 @@ export default function RootLayout({
                 </span>
               </p>
 
-              <div className="flex gap-5">
+              <div className="flex gap-2 lg:gap-5 items-center">
                 <Link href="/edit">
-                  <RiPencilFill size={40} />
+                  <RiPencilFill className="size-8 lg:size-10" />
                 </Link>
                 <ThemeController />
               </div>
