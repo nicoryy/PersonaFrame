@@ -1,6 +1,6 @@
-import { atom } from "jotai";
+import { atomWithStorage } from "jotai/utils";
 
-export const homeAtom = atom({
+export const homeAtom = atomWithStorage("home", {
   id: "home",
   aboutme:
     "Hello  there! I‘m thrilled to welcome you to my portfolio. I am a passionate and versatile full-stack developer with a keen interest in exploring the latest cutting-edge technologies. My journey in the world of web development has been nothing short of exhilarating, and I constantly strive to enhance my skills and embrace emerging trends in the industry.",
@@ -28,7 +28,7 @@ export const homeAtom = atom({
   },
 });
 
-export const profileAtom = atom({
+export const profileAtom = atomWithStorage("profile", {
   id: "profile",
   image:
     "https://avatars.githubusercontent.com/u/96792563?s=400&u=5c4c080bc87a024ad7071e000ff1800614e16523&v=4",
@@ -46,7 +46,7 @@ export const profileAtom = atom({
     "https://drive.google.com/file/d/1ta1-8-tO8oahJcQoiOpZZww547-OuOZZ/view",
 });
 
-export const resumeAtom = atom({
+export const resumeAtom = atomWithStorage("resume", {
   id: "resume",
   educations: [
     {
@@ -96,7 +96,7 @@ export const resumeAtom = atom({
   ],
 });
 
-export const projectsAtom = atom({
+export const projectsAtom = atomWithStorage("projects", {
   id: "projects",
   projects: [
     {
