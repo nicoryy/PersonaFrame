@@ -87,12 +87,9 @@ const EditPage = () => {
             <section className="flex flex-col gap-5">
               <div>
                 <Title title="About Me" />
-                <label htmlFor="aboutme" className="label">
-                  About Me
-                </label>
                 <textarea
                   id="aboutme"
-                  className="textarea textarea-primary w-full"
+                  className="textarea textarea-primary w-full mt-5"
                   value={home.aboutme}
                   onChange={(e) =>
                     setHome({ ...home, aboutme: e.target.value })
