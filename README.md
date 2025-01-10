@@ -13,6 +13,7 @@ This design was inspired in [Beatrice Wambui](https://www.figma.com/community/fi
 ![GitHub forks](https://img.shields.io/github/forks/nicoryy/PersonaFrame?style=for-the-badge)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/nicoryy/PersonaFrame?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/nicoryy/PersonaFrame?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/nicoryy/PersonaFrame?style=for-the-badge)
 
 > A beautiful portfolio design from a figma post made with NextJs and editable with personal data.
 
@@ -20,11 +21,12 @@ This design was inspired in [Beatrice Wambui](https://www.figma.com/community/fi
 
 The project is still under development and the next updates will focus on the following tasks:
 
-- [ ] **Scalability:** Ensure the application can handle growth and increased demand.
-- [ x ] **Dark Mode:** Provide an option for a dark theme for comfortable viewing.
-- [ ] **Personal Information Edits:** Allow customization with personal details. ( this is all the thing that's make this different )
+- [x] **Scalability:** Ensure the application can handle growth and increased demand.
+- [x] **Dark Mode:** Provide an option for a dark theme for comfortable viewing.
+- [x] **Personal Information Edits:** Allow customization with personal details. ( this is all the thing that's make this different )
 - [ ] **Color Customization:** Enable users to change color schemes.
-- [ x ] **Responsiveness:** Optimize the design for various devices and screen sizes.
+- [x] **Responsiveness:** Optimize the design for various devices and screen sizes.
+
 
 ## Scalability
 
