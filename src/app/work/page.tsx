@@ -34,12 +34,12 @@ const WorkPage = () => {
                 height={200}
               />
             ) : (
-              <div className="w-full h-40 bg-base-300 rounded-lg    grid place-items-center  ">
+              <div className="w-full h-40 bg-base-300 rounded-lg grid place-items-center">
                 Follow Nicory :)
               </div>
             )}
             <p className="text-sm font-mono">{type}</p>
-            <div className="flex justify-between">
+            <div className="flex justify-between gap-1">
               <h3 className="font-semibold text-lg">{title}</h3>
               <a
                 href={github}
