@@ -4,6 +4,7 @@ import { projectsAtom } from "@/components/constans";
 import Conteiner from "@/components/layout/Conteiner";
 import Title from "@/components/layout/Title";
 import { useAtom } from "jotai";
+import Image from "next/image";
 import React from "react";
 
 const WorkPage = () => {
@@ -24,9 +25,19 @@ const WorkPage = () => {
         {work.projects.map(({ image, title, type, github }, index) => (
           <div className="bg-base-200 p-5 grid gap-2 rounded-lg" key={index}>
             {/* Change this with your image */}
-            <div className="w-full h-40 bg-base-300 rounded-lg    grid place-items-center  ">
-              {image}
-            </div>
+            {image !== "" ? (
+              <Image
+                src={image}
+                alt={title}
+                className="w-full h-40 object-cover rounded-lg"
+                width={400}
+                height={200}
+              />
+            ) : (
+              <div className="w-full h-40 bg-base-300 rounded-lg    grid place-items-center  ">
+                Follow Nicory :)
+              </div>
+            )}
             <p className="text-sm font-mono">{type}</p>
             <div className="flex justify-between">
               <h3 className="font-semibold text-lg">{title}</h3>

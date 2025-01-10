@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: "avatars.githubusercontent.com",
         pathname: "/**", // Permite todos os caminhos no domínio especificado
       },
+      {
+        protocol: "https",
+        hostname: "raw.githubusercontent.com",
+        pathname: "/**", // Permite todos os caminhos no domínio especificado
+      },
     ],
   },
 };
