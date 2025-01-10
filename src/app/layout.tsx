@@ -57,7 +57,6 @@ export default function RootLayout({
         >
           {" "}
           <section className="rounded-lg bg-base-200 h-[calc(100dvh-2rem)] w-full overflow-y-scroll pb-5">
-            {/* <AlertCompo /> */}
             <div className="flex justify-between py-5 px-10 mb-20">
               <p className={`text-3xl font-medium ${windSong.className}`}>
                 {profile.firstname}{" "}
