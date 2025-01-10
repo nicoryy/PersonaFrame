@@ -7,16 +7,24 @@ import { useAtom } from "jotai";
 import {
   profileAtom,
   homeAtom,
-  //   projectsAtom,
+  projectsAtom,
   resumeAtom,
 } from "@/components/constans";
-import { FaTimes } from "react-icons/fa";
+import { FaPencilAlt, FaTimes } from "react-icons/fa";
+import Image from "next/image";
 
 const EditPage = () => {
   const [home, setHome] = useAtom(homeAtom);
   const [profile, setProfile] = useAtom(profileAtom);
   const [resume, setResume] = useAtom(resumeAtom); //setResume
-  //   const [projects, setProjects] = useAtom(projectsAtom);
+  const [projects, setProjects] = useAtom(projectsAtom);
+
+  const [isEditingProject, setIsEditingProject] = useState<{
+    title: string;
+    type: string;
+    image: string;
+    github: string;
+  } | null>(null);
 
   const [isSelected, setIsSelected] = useState("home");
 
@@ -533,7 +541,11 @@ const EditPage = () => {
                   }}
                   className="w-full flex justify-between gap-10"
                 >
-                  <input placeholder="Input here something you wanna add" type="text" className="input input-primary text-sm text-base-content/40 w-full" />
+                  <input
+                    placeholder="Input here something you wanna add"
+                    type="text"
+                    className="input input-primary text-sm text-base-content/40 w-full"
+                  />
 
                   <button type="submit" className="btn btn-primary">
                     Add
@@ -586,13 +598,252 @@ const EditPage = () => {
                   }}
                   className="w-full flex justify-between gap-10"
                 >
-                  <input placeholder="Input here something you wanna add" type="text" className="input input-primary text-sm w-full" />
+                  <input
+                    placeholder="Input here something you wanna add"
+                    type="text"
+                    className="input input-primary text-sm w-full"
+                  />
 
                   <button type="submit" className="btn btn-primary">
                     Add
                   </button>
                 </form>
               </div>
+            </section>
+          )}
+        </div>
+
+        <div
+          className={`${
+            isSelected === "work"
+              ? "opacity-100 scale-100"
+              : "opacity-0 scale-95"
+          } transition-all duration-500 absolute inset-0`}
+        >
+          {isSelected === "work" && (
+            <section className="bg-base-300 p-5 rounded-lg flex flex-col gap-5 relative">
+              <Title title="Projects" />
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+                {projects.projects.map((project, index) => (
+                  <div
+                    key={index}
+                    className="bg-base-200 p-5 rounded-lg flex flex-col gap-2"
+                  >
+                    {project.image !== "" ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-40 object-cover rounded-lg"
+                        width={400}
+                        height={200}
+                      />
+                    ) : (
+                      <div className="w-full h-40 bg-base-300 rounded-lg grid place-items-center">
+                        Follow Nicory :)
+                      </div>
+                    )}
+                    <p className="text-sm font-mono">{project.type}</p>
+                    <span className="flex justify-between items-center">
+                      <p className="font-semibold">{project.title}</p>
+                      <div className="flex justify-end gap-2">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const newProjects = projects.projects.filter(
+                              (p, i) => i !== index
+                            );
+                            setProjects({ ...projects, projects: newProjects });
+                          }}
+                          className="btn btn-error btn-sm"
+                        >
+                          <FaTimes />
+                        </button>
+
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setIsEditingProject(project);
+                          }}
+                          className="btn btn-primary btn-sm"
+                        >
+                          <FaPencilAlt />
+                        </button>
+                      </div>
+
+                      {isEditingProject &&
+                        isEditingProject.title === project.title && (
+                          <form
+                            onSubmit={(e) => {
+                              e.preventDefault();
+                              const formData = new FormData(e.currentTarget);
+                              const title = formData.get("title") as string;
+                              const type = formData.get("type") as string;
+                              const image = formData.get("image") as string;
+                              const github = formData.get("github") as string;
+
+                              if (!title && !type && !image && !github) return;
+
+                              const newProjects = projects.projects.map((p) =>
+                                p.title === project.title
+                                  ? { title, type, image, github }
+                                  : p
+                              );
+
+                              setProjects({
+                                ...projects,
+                                projects: newProjects,
+                              });
+                              setIsEditingProject(null);
+                            }}
+                            className="mt-5 absolute left-5 bottom-[552px] flex flex-col w-full pr-10 gap-5"
+                          >
+                            <Title title="Edit Project" />
+                            <span className="flex flex-col gap-1">
+                              <label htmlFor="title">Title</label>
+                              <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                defaultValue={project.title}
+                                placeholder="Project Name"
+                                className="input input-primary text-sm w-full"
+                              />
+                            </span>
+
+                            <span className="flex flex-col gap-1">
+                              <label htmlFor="type">Type</label>
+                              <input
+                                type="text"
+                                id="type"
+                                name="type"
+                                defaultValue={project.type}
+                                placeholder="Project Type"
+                                className="input input-primary text-sm w-full"
+                              />
+                            </span>
+
+                            <span className="flex flex-col gap-1">
+                              <label htmlFor="image">Image</label>
+                              <input
+                                type="text"
+                                id="image"
+                                name="image"
+                                defaultValue={project.image}
+                                placeholder="Project Image"
+                                className="input input-primary text-sm w-full"
+                              />
+                            </span>
+
+                            <span className="flex flex-col gap-1">
+                              <label htmlFor="github">Github</label>
+                              <input
+                                type="text"
+                                id="github"
+                                name="github"
+                                defaultValue={project.github}
+                                placeholder="Project Github"
+                                className="input input-primary text-sm w-full"
+                              />
+                            </span>
+
+                            <button
+                              type="submit"
+                              className="btn btn-primary mt-5"
+                            >
+                              FINISH
+                            </button>
+                          </form>
+                        )}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const formData = new FormData(e.currentTarget);
+                  const title = formData.get("title") as string;
+                  const type = formData.get("type") as string;
+                  const image = formData.get("image") as string;
+                  const github = formData.get("github") as string;
+
+                  if (!title && !type && !image && !github) return;
+
+                  setProjects({
+                    ...projects,
+                    projects: [
+                      ...projects.projects,
+                      {
+                        title,
+                        type,
+                        image,
+                        github,
+                      },
+                    ],
+                  });
+                }}
+                className={
+                  isEditingProject
+                    ? "pt-[552px] flex flex-col gap-5"
+                    : "flex flex-col gap-5"
+                }
+              >
+                <Title title="Add new project" />
+
+                <span className="flex flex-col gap-1">
+                  <label htmlFor="title">Title</label>
+                  <input
+                    id="title"
+                    name="title"
+                    type="text"
+                    required
+                    className="input input-primary text-sm"
+                  />
+                </span>
+
+                <span className="flex flex-col gap-1">
+                  <label htmlFor="type">Type</label>
+                  <input
+                    id="type"
+                    name="type"
+                    type="text"
+                    required
+                    className="input input-primary text-sm"
+                  />
+                </span>
+
+                <span className="flex flex-col gap-1">
+                  <label htmlFor="image">
+                    Image URL{" "}
+                    <span className="text-xs text-base-content/40">
+                      optional
+                    </span>
+                  </label>
+                  <input
+                    id="image"
+                    name="image"
+                    type="text"
+                    className="input input-primary text-sm"
+                  />
+                </span>
+
+                <span className="flex flex-col gap-1">
+                  <label htmlFor="github">Github Link</label>
+                  <input
+                    id="github"
+                    name="github"
+                    type="text"
+                    required
+                    className="input input-primary text-sm"
+                  />
+                </span>
+
+                <button type="submit" className="btn btn-primary">
+                  Add
+                </button>
+              </form>
             </section>
           )}
         </div>
