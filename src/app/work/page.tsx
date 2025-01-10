@@ -48,7 +48,7 @@ const WorkPage = () => {
       </ul>
 
       <section
-        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 transition-opacity duration-500"
+        className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 transition-opacity duration-500 overflow-y-auto lg:max-h-[calc(100dvh-400px)]"
         style={{
           display: work.projects.filter(
             (project) => filter === "All" || project.type === filter
@@ -103,3 +103,4 @@ const WorkPage = () => {
 };
 
 export default WorkPage;
+
