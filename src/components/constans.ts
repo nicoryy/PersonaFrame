@@ -102,25 +102,28 @@ export const projectsAtom = atom({
     {
       title: "El_Chancho Menu",
       type: "Mobile",
-      image: "Image Example",
+      image:
+        "https://raw.githubusercontent.com/nicoryy/el_chancho_menu/refs/heads/master/public/profile.png",
       github: "https://github.com/nicoryy/el_chancho_menu",
     },
     {
-      title: "L&L - Assessoria e Servi o s ",
+      title: "L&L - Assessoria e Serviços",
       type: "Website",
-      image: "Image Example",
+      image:
+        "https://raw.githubusercontent.com/nicoryy/L-L_Assessoria_e_Servicos/refs/heads/main/public/profile.png",
       github: "https://github.com/nicoryy/L-L_Assessoria_e_Servicos",
     },
     {
       title: "Persona Frame",
       type: "Website",
-      image: "Image Example",
+      image:
+        "https://raw.githubusercontent.com/nicoryy/PersonaFrame/refs/heads/main/public/profile.png",
       github: "https://github.com/nicoryy/personaFrame",
     },
     {
       title: "Auto Create Dir",
       type: "Desktop",
-      image: "Image Example",
+      image: "",
       github: "https://github.com/nicoryy/ACD",
     },
   ],
